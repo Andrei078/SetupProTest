@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test Audio – SetupProTest</title>
+<link rel="stylesheet" href="../css/audio.css">
+<link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<main class="audio-page">
+
+  <h1>Test Căști / Audio</h1>
+  <p class="description">Selectează dispozitivul audio și testează sunetul și microfonul.</p>
+
+  <section class="audio-controls">
+    <div class="control-group">
+      <label for="audioOutputSelect">Selectează Căști / Boxe:</label>
+      <select id="audioOutputSelect"></select>
+      <button id="playTest">Redă Sunet Test</button>
+    </div>
+
+    <div class="control-group">
+      <label for="audioInputSelect">Selectează Microfon:</label>
+      <select id="audioInputSelect"></select>
+      <button id="startMic">Testează Microfon</button>
+        <button id="toggleMic" class="btn-start">Start Microfon</button>
+
+    </div>
+  </section>
+
+  <section class="audio-info">
+    <div class="info-box">
+      <span class="label">Volum redare:</span>
+      <span id="volumeLevel">-</span>
+    </div>
+    <div class="info-box">
+      <span class="label">Nivel Microfon:</span>
+      <span id="micLevel">-</span>
+    </div>
+    <div class="info-box">
+      <span class="label">Calitate Audio:</span>
+      <span id="audioQuality">-</span>
+    </div>
+  </section>
+
+  <audio id="testAudio" src="../assets/test-tone.m4a"></audio>
+
+  
+
+</main>
+
+<script src="../js/audio.js"></script>
+</body>
+</html>

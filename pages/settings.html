@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Setări</title>
+
+  <link rel="stylesheet" href="../css/settings.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1><i class="fas fa-cog"></i> Setări Aplicație</h1>
+
+  <div class="card">
+
+    <h2>Limbă Interfață</h2>
+
+    <p>Alege limba dorită pentru aplicație:</p>
+
+    <select id="language">
+      <option value="ro">Română</option>
+      <option value="en">English</option>
+      <option value="de">Deutsch</option>
+      <option value="fr">Français</option>
+      <option value="jp">日本語</option>
+    </select>
+
+    <button class="save" onclick="saveSettings()">
+      <i class="fas fa-save"></i> Salvează Setările
+    </button>
+
+  </div>
+
+  <div class="card">
+
+    <h2>Despre Aplicație</h2>
+
+    <p>
+      <b>SetupProTest</b> este o aplicație creată pentru testarea completă a perifericelor PC:
+      tastatură, mouse, webcam, căști și controllere.
+    </p>
+
+    <p>Versiune: <b>1.2.0</b></p>
+
+  </div>
+
+  <div class="card">
+
+    <h2>Update-uri</h2>
+
+    <p>Verifică dacă există versiuni noi ale aplicației:</p>
+
+    <button class="update" onclick="checkUpdates()">
+      <i class="fas fa-sync"></i> Caută Update-uri
+    </button>
+
+    <p id="updateStatus"></p>
+
+  </div>
+
+</div>
+
+<script src="../js/settings.js"></script>
+
+</body>
+</html>

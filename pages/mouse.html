@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test Mouse – SetupProTest</title>
+<link rel="stylesheet" href="../css/mouse.css">
+<link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<main class="mouse-page">
+
+  <h1>Test Mouse</h1>
+  <p class="description">Mișcă mouse-ul și apasă butoanele pentru a verifica funcționalitatea lor.</p>
+
+  <section class="mouse-info">
+    <div class="info-box">
+      <span class="label">Poziție X:</span>
+      <span id="posX">-</span>
+    </div>
+    <div class="info-box">
+      <span class="label">Poziție Y:</span>
+      <span id="posY">-</span>
+    </div>
+    <div class="info-box">
+      <span class="label">Click:</span>
+      <span id="clickType">-</span>
+    </div>
+    <div class="info-box">
+      <span class="label">Distanță parcursă:</span>
+      <span id="distance">0 px</span>
+    </div>
+  </section>
+
+  <section class="mouse-area">
+    <div class="cursor-tracker" id="cursorTracker"></div>
+  </section>
+
+</main>
+
+<script src="../js/mouse.js"></script>
+</body>
+</html>

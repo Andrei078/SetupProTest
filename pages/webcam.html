@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test Webcam – SetupProTest</title>
+<link rel="stylesheet" href="../css/webcam.css">
+<link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<main class="webcam-page">
+
+  <h1>Test Webcam</h1>
+  <p class="description">Selectează camera și vizualizează imaginea live. Vezi detaliile tehnice ale fluxului video.</p>
+
+  <section class="webcam-controls">
+    <label for="cameraSelect">Selectează Webcam:</label>
+    <select id="cameraSelect"></select>
+    <button id="startBtn">Porneste Webcam</button>
+  </section>
+
+  <section class="webcam-preview">
+    <video id="webcamVideo" autoplay playsinline></video>
+  </section>
+
+  <section class="webcam-info">
+    <div class="info-box">
+      <span class="label">Rezoluție:</span>
+      <span id="resolution">-</span>
+    </div>
+    <div class="info-box">
+      <span class="label">FPS / Calitate:</span>
+      <span id="fps">-</span>
+    </div>
+    <div class="info-box">
+      <span class="label">Latenta aprox:</span>
+      <span id="latency">-</span>
+    </div>
+  </section>
+
+</main>
+
+<script src="../js/webcam.js"></script>
+</body>
+</html>

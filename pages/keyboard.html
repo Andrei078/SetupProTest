@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test Tastatură – SetupProTest</title>
+<link rel="stylesheet" href="../css/keyboard.css">
+<link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<main class="keyboard-page">
+
+  <h1>Test Tastatură</h1>
+  <p class="description">Apasă pe taste pentru a verifica funcționarea lor. Tastele apăsate vor fi evidențiate și timpul de răspuns afișat.</p>
+
+  <section class="info">
+    <div class="info-box">
+      <span class="label">Ultima tastă:</span>
+      <span id="lastKey">-</span>
+    </div>
+    <div class="info-box">
+      <span class="label">Cod tastă:</span>
+      <span id="keyCode">-</span>
+    </div>
+    <div class="info-box">
+      <span class="label">Timp răspuns:</span>
+      <span id="responseTime">- ms</span>
+    </div>
+  </section>
+
+  <section class="keyboard" id="keyboard">
+
+    <!-- Rând 1: Escape + F1-F12 + PrintScreen + ScrollLock + Pause -->
+    <div class="key-row">
+      <div class="key" data-key="Escape">ESC</div>
+      <div class="key" data-key="F1">F1</div>
+      <div class="key" data-key="F2">F2</div>
+      <div class="key" data-key="F3">F3</div>
+      <div class="key" data-key="F4">F4</div>
+      <div class="key" data-key="F5">F5</div>
+      <div class="key" data-key="F6">F6</div>
+      <div class="key" data-key="F7">F7</div>
+      <div class="key" data-key="F8">F8</div>
+      <div class="key" data-key="F9">F9</div>
+      <div class="key" data-key="F10">F10</div>
+      <div class="key" data-key="F11">F11</div>
+      <div class="key" data-key="F12">F12</div>
+    </div>
+
+    <!-- Rând 2: `1-0 - = Backspace -->
+    <div class="key-row">
+      <div class="key wide" data-key="Backquote">`</div>
+      <div class="key" data-key="Digit1">1</div>
+      <div class="key" data-key="Digit2">2</div>
+      <div class="key" data-key="Digit3">3</div>
+      <div class="key" data-key="Digit4">4</div>
+      <div class="key" data-key="Digit5">5</div>
+      <div class="key" data-key="Digit6">6</div>
+      <div class="key" data-key="Digit7">7</div>
+      <div class="key" data-key="Digit8">8</div>
+      <div class="key" data-key="Digit9">9</div>
+      <div class="key" data-key="Digit0">0</div>
+      <div class="key" data-key="Minus">-</div>
+      <div class="key" data-key="Equal">=</div>
+      <div class="key wide" data-key="Backspace">Backspace</div>
+    </div>
+
+    <!-- Rând 3: Tab + Q-P + [ ] \ -->
+    <div class="key-row">
+      <div class="key wide" data-key="Tab">Tab</div>
+      <div class="key" data-key="KeyQ">Q</div>
+      <div class="key" data-key="KeyW">W</div>
+      <div class="key" data-key="KeyE">E</div>
+      <div class="key" data-key="KeyR">R</div>
+      <div class="key" data-key="KeyT">T</div>
+      <div class="key" data-key="KeyY">Y</div>
+      <div class="key" data-key="KeyU">U</div>
+      <div class="key" data-key="KeyI">I</div>
+      <div class="key" data-key="KeyO">O</div>
+      <div class="key" data-key="KeyP">P</div>
+      <div class="key" data-key="BracketLeft">[</div>
+      <div class="key" data-key="BracketRight">]</div>
+      <div class="key" data-key="Backslash">\\</div>
+    </div>
+
+    <!-- Rând 4: CapsLock + A-L + ; ' Enter -->
+    <div class="key-row">
+      <div class="key wide" data-key="CapsLock">Caps</div>
+      <div class="key" data-key="KeyA">A</div>
+      <div class="key" data-key="KeyS">S</div>
+      <div class="key" data-key="KeyD">D</div>
+      <div class="key" data-key="KeyF">F</div>
+      <div class="key" data-key="KeyG">G</div>
+      <div class="key" data-key="KeyH">H</div>
+      <div class="key" data-key="KeyJ">J</div>
+      <div class="key" data-key="KeyK">K</div>
+      <div class="key" data-key="KeyL">L</div>
+      <div class="key" data-key="Semicolon">;</div>
+      <div class="key" data-key="Quote">'</div>
+      <div class="key wide" data-key="Enter">Enter</div>
+    </div>
+
+    <!-- Rând 5: Shift + Z-M + , . / Shift -->
+    <div class="key-row">
+      <div class="key wide" data-key="ShiftLeft">Shift</div>
+      <div class="key" data-key="KeyZ">Z</div>
+      <div class="key" data-key="KeyX">X</div>
+      <div class="key" data-key="KeyC">C</div>
+      <div class="key" data-key="KeyV">V</div>
+      <div class="key" data-key="KeyB">B</div>
+      <div class="key" data-key="KeyN">N</div>
+      <div class="key" data-key="KeyM">M</div>
+      <div class="key" data-key="Comma">,</div>
+      <div class="key" data-key="Period">.</div>
+      <div class="key" data-key="Slash">/</div>
+      <div class="key wide" data-key="ShiftRight">Shift</div>
+    </div>
+
+    <!-- Rând 6: Ctrl + Win + Alt + Space + AltGr + Win + Menu + Ctrl -->
+    <div class="key-row">
+      <div class="key wide" data-key="ControlLeft">Ctrl</div>
+      <div class="key wide" data-key="MetaLeft">Win</div>
+      <div class="key wide" data-key="AltLeft">Alt</div>
+      <div class="key extra-wide" data-key="Space">Space</div>
+      <div class="key wide" data-key="AltRight">AltGr</div>
+      <div class="key wide" data-key="MetaRight">Win</div>
+      <div class="key wide" data-key="ContextMenu">Menu</div>
+        </div>
+
+  </section>
+
+</main>
+
+<script src="../js/keyboard.js"></script>
+</body>
+</html>
