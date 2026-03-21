@@ -1,1 +1,76 @@
-<h2>Test Controller</h2><div id='c'></div><script>window.addEventListener('gamepadconnected',()=>c.innerText='Controller conectat!');</script>
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Controller Test</title>
+  <link rel="stylesheet" href="../css/controller.css">
+</head>
+
+<body>
+
+<div class="controller-page">
+
+  <h1>Controller Test</h1>
+
+  <div class="info">
+    <div class="info-box">Status: <span id="status">Neconectat</span></div>
+    <div class="info-box">Model: <span id="model">--</span></div>
+  </div>
+
+  <div class="controller-wrapper">
+
+    <!-- STICK-URI -->
+    <div class="stick" id="left-stick"></div>
+    <div class="stick" id="right-stick"></div>
+
+    <!-- BUTOANE XYAB -->
+    <div class="btn btn-y" data-btn="3">Y</div>
+    <div class="btn btn-b" data-btn="1">B</div>
+    <div class="btn btn-x" data-btn="2">X</div>
+    <div class="btn btn-a" data-btn="0">A</div>
+
+    <!-- D-PAD -->
+    <div class="btn dpad up" data-btn="12">↑</div>
+    <div class="btn dpad down" data-btn="13">↓</div>
+    <div class="btn dpad left" data-btn="14">←</div>
+    <div class="btn dpad right" data-btn="15">→</div>
+
+    <!-- TRIGGERS -->
+    <div class="btn small" id="btn-4" data-btn="4">LB</div>
+    <div class="btn small" id="btn-5" data-btn="5">RB</div>
+
+    <div class="btn small" id="btn-6" data-btn="6">LT</div>
+    <div class="btn small" id="btn-7" data-btn="7">RT</div>
+
+    <!-- START / SELECT -->
+    <div class="btn small" data-btn="8">SEL</div>
+    <div class="btn small" data-btn="9">START</div>
+
+  </div>
+
+</div>
+
+<div class="stats-container">
+
+  <h2>Statistici Controller</h2>
+
+  <div class="stat">
+    <span>Latență:</span>
+    <strong id="latency">0 ms</strong>
+  </div>
+
+  <div class="stat">
+    <span>Apăsare (Trigger):</span>
+    <strong id="pressure">0</strong>
+  </div>
+
+  <div class="stat">
+    <span>Stick Drift:</span>
+    <strong id="drift">0</strong>
+  </div>
+
+  <button id="vibration-btn" class="vib-on">Vibrație: ON</button>
+
+</div><script src="../js/controller.js"></script>
+</body>
+</html>

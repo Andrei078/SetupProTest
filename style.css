@@ -16,10 +16,10 @@ body {
   box-shadow: 2px 0 10px rgba(0,0,0,0.6);
 }
 
-.logo-area {
-  text-align: center;
-  margin-bottom: 30px;
-  font-weight: bold;
+.logo {
+  margin-bottom: auto;
+  width: 300px;
+  height: auto;
 }
 
 .menu {
@@ -86,8 +86,4 @@ select {
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
-}
-
-.update-btn:hover {
-  background: #2ecc71;
 }
