@@ -1,1 +1,31 @@
-# SetupProTest
+/assets
+ -logo2.png
+ -logo.png
+ -test-tone.m4a
+/CSS
+-audio.css
+-Controller.css
+-Keyboard.css
+-Mouse.css
+-Webcam.css
+Setting.css
+/Js
+-audio.js
+-Controller.ja
+-Keyboard.js
+-Mouse.js
+-Webcam.js
+Setting.js
+/Pages
+-audio.html
+-Controller.html
+-Keyboard.html
+-Mouse.html
+-Webcam.html
+Setting.html
+App.js
+Index.html
+Main.js
+Packege-lock.json
+Packege.json
+Styles.css# SetupProTest
