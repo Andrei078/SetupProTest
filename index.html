@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SetupProTest</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Animated background particles -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo-wrap">
+        <div class="logo-icon">
+          <span class="logo-glyph">S</span>
+          <div class="logo-ring"></div>
+        </div>
+        <div class="logo-text">
+          <span class="logo-main">Setup</span><span class="logo-accent">Pro</span>
+          <span class="logo-sub">TEST v2.0</span>
+        </div>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <span class="nav-label">PERIPHERALS</span>
+
+      <a class="nav-item active" data-page="home" onclick="loadPage('home')">
+        <span class="nav-icon"><i class="fas fa-home"></i></span>
+        <span class="nav-text">Dashboard</span>
+        <span class="nav-glow"></span>
+      </a>
+
+      <a class="nav-item" data-page="keyboard" onclick="loadPage('keyboard')">
+        <span class="nav-icon"><i class="fas fa-keyboard"></i></span>
+        <span class="nav-text">Keyboard</span>
+        <span class="nav-badge" id="badge-keyboard"></span>
+        <span class="nav-glow"></span>
+      </a>
+
+      <a class="nav-item" data-page="mouse" onclick="loadPage('mouse')">
+        <span class="nav-icon"><i class="fas fa-mouse"></i></span>
+        <span class="nav-text">Mouse</span>
+        <span class="nav-badge" id="badge-mouse"></span>
+        <span class="nav-glow"></span>
+      </a>
+
+      <a class="nav-item" data-page="controller" onclick="loadPage('controller')">
+        <span class="nav-icon"><i class="fas fa-gamepad"></i></span>
+        <span class="nav-text">Controller</span>
+        <span class="nav-badge" id="badge-controller"></span>
+        <span class="nav-glow"></span>
+      </a>
+
+      <a class="nav-item" data-page="audio" onclick="loadPage('audio')">
+        <span class="nav-icon"><i class="fas fa-headphones"></i></span>
+        <span class="nav-text">Audio</span>
+        <span class="nav-glow"></span>
+      </a>
+
+      <a class="nav-item" data-page="webcam" onclick="loadPage('webcam')">
+        <span class="nav-icon"><i class="fas fa-video"></i></span>
+        <span class="nav-text">Webcam</span>
+        <span class="nav-glow"></span>
+      </a>
+
+      <span class="nav-label">TOOLS</span>
+
+      <a class="nav-item" data-page="stats" onclick="loadPage('stats')">
+        <span class="nav-icon"><i class="fas fa-chart-line"></i></span>
+        <span class="nav-text">Statistics</span>
+        <span class="nav-glow"></span>
+      </a>
+
+      <a class="nav-item" data-page="settings" onclick="loadPage('settings')">
+        <span class="nav-icon"><i class="fas fa-sliders-h"></i></span>
+        <span class="nav-text">Settings</span>
+        <span class="nav-glow"></span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="session-info">
+        <i class="fas fa-clock"></i>
+        <span id="session-time">00:00:00</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main area -->
+  <div class="main-wrap">
+    <!-- Top header -->
+    <header class="top-header">
+      <button class="sidebar-toggle" id="sidebar-toggle" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="header-center">
+        <span class="breadcrumb" id="breadcrumb">Dashboard</span>
+      </div>
+
+      <div class="header-actions">
+        <div class="status-dots">
+          <span class="dot dot-kb" title="Keyboard" id="dot-keyboard"></span>
+          <span class="dot dot-ms" title="Mouse" id="dot-mouse"></span>
+          <span class="dot dot-ct" title="Controller" id="dot-controller"></span>
+        </div>
+
+        <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+          <span class="theme-icon-dark"><i class="fas fa-moon"></i></span>
+          <span class="theme-icon-light"><i class="fas fa-sun"></i></span>
+          <span class="toggle-label" id="theme-label">Dark</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Page content -->
+    <main class="content-area" id="content">
+      <!-- Loaded by JS -->
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/canvas.js"></script>
+</body>
+</html>
